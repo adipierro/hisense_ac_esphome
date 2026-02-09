@@ -606,7 +606,7 @@ int HisenseAC::get_response(const uint8_t input, uint8_t *out)
                 "CRC check failed. Computed: %d Received: %d",
                 checksum,
                 rxd_checksum);
-            reset = true;
+            //reset = true;
         }
     }
     else if (buf_idx == msg_size - 1) // second to last byte
