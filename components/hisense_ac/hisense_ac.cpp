@@ -552,7 +552,7 @@ int HisenseAC::get_response(const uint8_t input, uint8_t *out)
         f4_detect = false;
 
     // The checksum is computed from byte index 2 to msg_size - 4
-    if (buf_idx > 2 && buf_idx <= msg_size - 4)
+    if ((buf_idx > 2 && buf_idx < 6) || (buf_idx >= 6 && buf_idx <= msg_size - 4))
     {
         checksum += buf[buf_idx - 1];
     }
