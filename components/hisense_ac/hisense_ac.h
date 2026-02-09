@@ -54,7 +54,7 @@ private:
     Temperature_Unit temp_unit;
     float heat_tgt_temp = 25.0f;
     float cool_tgt_temp = 25.0f;
-    static const int UART_BUF_SIZE = 128;
+    static const int UART_BUF_SIZE = 256;
     uint8_t uart_buf[UART_BUF_SIZE];
     bool wait_for_rx = false;
 
